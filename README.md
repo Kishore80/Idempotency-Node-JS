@@ -11,13 +11,19 @@ Scenarios Considered here
 2. User Initiates a brand new payment
 
 2.1    Payment Completed Successfully
+
 2.1.1  But due to some reason the Client did not receive the response from backend.
+
 2.1.2  User attempt to retry the Payment (without knowing that the Payment has already successful)
+
 2.1.3  Using the Idempotency Key Value , We return the Status to the user without retrying the API. [Real Use of Idempotency Key plays here]
 
 2.2    Payment Not Completed (Neither Success Nor Failure) . It is still Pending State.
+
 2.2.1  But due to some reason the Client did not receive the response from backend.
+
 2.2.2  User attempt to retry the Pending Payment
+
 2.2.3  To simplify the use case , I chose to invoke the Pending Payment in the backend
 
 API 
